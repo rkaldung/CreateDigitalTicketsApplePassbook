@@ -1,0 +1,56 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "{{PASS TYPE ID}}",
+  "serialNumber" : "{{MEMBER ID}}",
+  "teamIdentifier" : "{{TEAM ID}}",
+  "barcode" : {
+    "message" : "{{MEMBER ID}}",
+    "format" : "PKBarcodeFormatPDF417",
+    "messageEncoding" : "iso-8859-1"
+  },
+  "organizationName" : "{{ORG NAME}}",
+  "description" : "{{DESCRIPTION}}",
+  "logoText" : "{{LOGO TEXT}}",
+  "foregroundColor" : "{{FOREGROUND}}",
+  "backgroundColor" : "{{BACKGROUND}}",
+  "generic" : {
+    "primaryFields" : [
+      {
+        "key" : "member",
+        "value" : "{{FULLNAME}}"
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "subtitle",
+        "label" : "MEMBER SINCE",
+        "value" : "{{YYYY}}"
+      }
+    ],
+    "auxiliaryFields" : [
+      {
+        "key" : "function",
+        "label" : "FUNCTION",
+        "value" : "{{FUNCTION}}"
+      }
+    ],
+    "backFields" : [
+    {
+      "label" : "Member ID",
+      "key" : "memberId",
+      "value" : "{{ID}}"
+    },
+      {
+        "dateStyle" : "PKDateStyleFull",
+        "label" : "Member Since",
+        "key" : "dateFull",
+        "value" : "{{DATE}}"
+      },
+      {
+        "label" : "Email",
+        "key" : "memberEmail",
+        "value" : "{{EMAIL}}"
+      }
+    ]
+  }
+}

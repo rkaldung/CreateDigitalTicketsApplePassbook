@@ -1,0 +1,28 @@
+# Dev Mode
+# Report and Display All Errors and Startup Errors
+php_value error_reporting -1
+php_value display_errors stdout
+php_flag display_startup_errors on
+
+Options -Indexes
+
+# Disable Varnish Cache
+<IfModule mod_headers.c>
+	Header set Pragma "no-cache"
+	Header set Cache-Control "s-maxage=0, max-age=0, must-revalidate, no-cache"
+</IfModule>
+
+# Add the right mime type for .pkpass
+# This allows Safari to manage the pass correctly
+AddType application/vnd.apple.pkpass    pkpass
+
+RewriteEngine On
+
+# Some hosts may require you to use the `RewriteBase` directive.
+# If you need to use the `RewriteBase` directive, it should be the
+# absolute physical path to the directory that contains this htaccess file.
+#
+# RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

@@ -1,0 +1,26 @@
+{
+    "name": "vtardia/mypassbook",
+    "description": "A Simple PHP server app for Apple Passbook",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vito Tardia",
+            "homepage": "http://www.vtardia.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-zip": "*",
+        "ext-fileinfo": "*",
+        "slim/slim": "*",
+        "slim/extras": "*",
+        "j4mie/paris": "*",
+        "swiftmailer/swiftmailer": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "MyPassbook": "lib/"
+        }
+    }
+}
